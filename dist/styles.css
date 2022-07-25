@@ -1,0 +1,71 @@
+/* CSS reset and general stuff */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --newOrange: rgb(160, 110, 16);
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url(./imagesFonts/GreatVibes-Regular.ttf);
+}
+
+/* Initial Page Load */
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    height: 7vh;
+    padding: 32px;
+    background-color: var(--newOrange);
+}
+
+.title {
+    font-family: titleFont, cursive;
+    font-size: 4rem;
+}
+
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 96px;
+    background-color: none;
+    margin-right: 84px;
+}
+
+.page {
+    font-family: titleFont, cursive;
+    font-size: 2.3rem;
+    border: none;
+    outline: none;
+    padding: 4px;
+    background-color: var(--newOrange);
+    transition: 0.05s ease-in-out;
+}
+
+.page:hover {
+    border-bottom: solid 2px black;
+    transform: scale(1.03);
+    transition: 0.05s ease-in-out;
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--newOrange);
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    font-family:'Courier New', Courier, monospace;
+}
