@@ -60,6 +60,10 @@ body {
     transition: 0.05s ease-in-out;
 }
 
+.active {
+    border-bottom: solid 2px black;
+}
+
 /* Content */
 
 .body {
