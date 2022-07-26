@@ -21,14 +21,18 @@ const initSite = () => {
         const home = document.createElement('button');
         home.textContent = 'Home';
         home.classList.add('page');
+        home.classList.add('active');
+        home.id = "home";
 
         const menu = document.createElement('button');
         menu.textContent = 'Menu';
         menu.classList.add('page');
+        menu.id = "menu"
 
         const about = document.createElement('button');
         about.textContent = 'About';
         about.classList.add('page');
+        about.id = "about"
 
         pageWrapper.appendChild(home);
         pageWrapper.appendChild(menu);
@@ -71,8 +75,26 @@ const initSite = () => {
 const initPage = () => {
     initSite();
     homePage();
-    menuPage();
+    
+    const pgHome = document.getElementById('home')
+    const pgMenu = document.getElementById('menu')
+    const pgAbout = document.getElementById('about')
 
+    pgHome.addEventListener('click', () => {
+        homePage();
+        pgHome.classList.remove('active');
+        pgMenu.classList.remove('active');
+        pgAbout.classList.remove('active');
+        pgHome.classList.add('active');
+    })
+    pgMenu.addEventListener('click', () => {
+        menuPage();
+        pgHome.classList.remove('active');
+        pgMenu.classList.remove('active');
+        pgAbout.classList.remove('active');
+        pgMenu.classList.add('active');
+        
+    })
 }
 
 export default initPage;
