@@ -1,5 +1,3 @@
-import bodyC from ".";
-
 const background = () => {
     document.querySelector('.body').style.backgroundImage = "url(https://images.unsplash.com/photo-1622880833523-7cf1c0bd4296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)"
 }
@@ -24,12 +22,14 @@ const homeContent = () => {
     bodyContent.appendChild(founded);
     bodyContent.appendChild(img);
     bodyContent.appendChild(fresh);
-    bodyC.appendChild(bodyContent);
+    body.appendChild(bodyContent);
 }
 
-const makeHome = () => {
+const homePage = () => {
+    const body = document.getElementById('body');
+    body.textContent = "";
     background();
     homeContent();
 }
 
-export default makeHome;
+export default homePage;

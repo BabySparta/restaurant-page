@@ -13,6 +13,10 @@
     src: url(./imagesFonts/GreatVibes-Regular.ttf);
 }
 
+body {
+    background-color: rgb(253, 200, 131);
+}
+
 /* Initial Page Load */
 
 /* Header */
@@ -20,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    max-width: 100vw;
     max-height: 7vh;
     padding: 32px;
     background-color: var(--newOrange);
@@ -59,35 +63,22 @@
 /* Content */
 
 .body {
-    width: 100vw;
-    height: 83vh;
+    max-width: 100vw;
+    height: 100%;
+    min-height: 83vh;
     background-repeat: none;
     background-size: 100vw 83vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
-
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--newOrange);
-    width: 100%;
-    height: 5vh;
-    position: fixed;
-    bottom: 0;
-    font-family:'Courier New', Courier, monospace;
-}
-
 
 /* Home Page */
 
 .bodyContent {
     width: 600px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -109,3 +100,85 @@
     height: 350px;
     border-radius: 16px;
 }
+
+/* Menu Page */
+
+.bodyContentM {
+    width: 800px;
+    background-color: rgb(197, 106, 53);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 200px 200px 200px 200px 36px;
+    padding: 32px;
+    gap: 32px;
+    margin: 84px;
+}
+
+.menuTxt {
+    grid-column: 1 / 3;
+    font-size: 8rem;
+    font-family: titleFont, cursive;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.item {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleM {
+    font-family: titleFont, cursive;
+    font-size: 1.7rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.imgM {
+    width: 125px;
+    height: 125px;
+    border-radius: 24px;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textM {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+.menuBottom {
+    grid-column: 1 / 3;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--newOrange);
+    width: 100%;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
