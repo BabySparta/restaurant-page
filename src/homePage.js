@@ -31,5 +31,5 @@ const homePage = () => {
     background();
     homeContent();
 }
-
+    
 export default homePage;

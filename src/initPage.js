@@ -1,5 +1,6 @@
 import menuPage from "./menuPage";
 import homePage from "./homePage";
+import aboutPage from "./aboutPage";
 
 
 const content = document.getElementById('content');
@@ -94,6 +95,13 @@ const initPage = () => {
         pgAbout.classList.remove('active');
         pgMenu.classList.add('active');
         
+    })
+    pgAbout.addEventListener('click', () => {
+        aboutPage();
+        pgHome.classList.remove('active');
+        pgMenu.classList.remove('active');
+        pgAbout.classList.remove('active');
+        pgAbout.classList.add('active');
     })
 }
 
