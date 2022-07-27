@@ -60,9 +60,26 @@ const aboutContent = () => {
     location.textContent = "14115 St Germain Dr, Centreville, VA 20121";
     location.classList.add('aboutTxt');
 
+
+    const descWrap = document.createElement('div');
+    descWrap.classList.add('descWrap');
+
+    const descImg = document.createElement('img');
+    descImg.classList.add('descImg');
+    descImg.src = "./imagesFonts/chef.jpg";
+    descImg.alt = "chef";
+
+    const descTxt = document.createElement('div');
+    descTxt.classList.add('aboutTxt');
+    descTxt.textContent = "Francesco Brizza founded the restaurant in 1836 after coming to America. He wanted to bring the Italian cuisine with him and so Brizza was born. Ownership of the restaraunt has been passed down each generation and now resides with Antonio Brizza."
+    
+    descWrap.appendChild(descImg);
+    descWrap.appendChild(descTxt);
+
     aboutContent.appendChild(hourWrap);
     aboutContent.appendChild(numWrapper);
     aboutContent.appendChild(locWrapper);
+    aboutContent.appendChild(descWrap);
     hourWrap.appendChild(hoursTitle);
     hourWrap.appendChild(hoursWrap1);
     hourWrap.appendChild(hoursWrap2);
